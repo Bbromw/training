@@ -1,5 +1,5 @@
 function StringToNumber(str){
-    console.log(str * 1);
+    return str * 1;
 }
 
-StringToNumber("123");
+console.log(StringToNumber("123"));
