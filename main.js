@@ -1,5 +1,9 @@
-function StringToNumber(str){
-    return str * 1;
+function StringToNumber(str) {
+    return str * 1
 }
 
-console.log(StringToNumber("123"));
+console.log(StringToNumber("123"))
+
+function hello() {
+    return "hello"
+}
