@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #000228;
+  --list-item-nav-color: #4F5361;
+  --background-color: #E6F0FF ;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background-color: var(--background-color);
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header__nav {
+  margin: 0 auto;
+  padding: 47px 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 1110px;
+}
+.header__nav .nav__logo {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.header__nav .nav__list {
+  list-style: none;
+  font-size: 1.4rem;
+  margin: 0 0;
+  padding: 0;
+  flex: 1;
+}
+.header__nav .nav__list .nav__list-item {
+  display: inline-block;
+  margin-left: 30px;
+}
+.header__nav .nav__list .nav__list-item-link {
+  text-decoration: none;
+  color: var(--list-item-nav-color);
+}
+.header__nav .nav__authority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.header__nav .nav__authority-element {
+  margin-left: 18px;
+  color: #0F1B4C;
+  padding: 0 10px;
+  text-align: center;
+}
+.header__nav .nav__authority .nav__register {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  line-height: 2.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
