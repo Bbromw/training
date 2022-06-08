@@ -1,66 +1,74 @@
-:root{
+:root {
     --primary-color: #000228;
-    --list-item-nav-color: #4F5361
+    --list-item-nav-color: #4F5361;
+    --background-color: #E6F0FF
 }
 
-*{
+* {
     box-sizing: inherit;
+    margin: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.grid{
+.header {
+    background-color: var(--background-color);
+}
+
+.grid {
     width: 1200px;
-    max-width:100%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-.header__nav{
-    padding: 47px 165px;
+.header__nav {
+    padding: 47px 0;
     display: flex;
     justify-items: center;
     align-items: center;
     justify-content: space-around;
-    .nav__logo{
+    width: 1110px;
+    .nav__logo {
         color: var(--primary-color);
         font-size: 2rem;
     }
-    .nav__list{
+    .nav__list {
         list-style: none;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin: 0 0;
         padding: 0;
         flex: 1;
     }
-    .nav__authority{
+    .nav__authority {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        .nav__list-item {
+            display: inline-block;
+            margin-left: 30px;
+            &-link {
+                text-decoration: none;
+                color: var(--list-item-nav-color);
+            }
+        }
+
+        &-element {
+            margin-left: 18px;
+            color: #0F1B4C;
+            padding: 0 10px;
+            text-align: center;
+            .nav__register {
+                background-color: var(--primary-color);
+                color: white;
+                border-radius: 8px;
+                padding: 10px 20px;
+                line-height: 2.1rem;
+            }
+        }
     }
-}
-
-.nav__list-item{
-    display: inline-block;
-    margin-left: 30px;
-    .nav__list-item-link{
-        text-decoration: none;
-        color: var(--list-item-nav-color);
-    }
-}
-
-.nav__authority-element{
-    margin-left: 10px;
-    color: #0F1B4C;
-    padding: 0 10px;
-}
-
-.nav__register{
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 8px;
-    padding: 10px 20px;
 }
