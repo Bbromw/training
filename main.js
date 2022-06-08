@@ -10,3 +10,7 @@ function hello() {
 function greeting() {
     return "Hello world"
 }
+
+function conflicts(er) {
+    return new Error("Conflict herre")
+}
