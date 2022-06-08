@@ -20,21 +20,14 @@ html {
     background-color: var(--background-color);
 }
 
-.header {
-    background-color: var(--background-color);
-}
-
 .grid {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
 }
 
-
-.header__nav{
-
 .header__nav {
-
+    margin: 0 auto;
     padding: 47px 0;
     display: flex;
     justify-items: center;
@@ -51,59 +44,34 @@ html {
         margin: 0 0;
         padding: 0;
         flex: 1;
+        .nav__list-item{
+            display: inline-block;
+            margin-left: 30px;
+            &-link{
+                text-decoration: none;
+                color: var(--list-item-nav-color);
+            }
+        }
+
     }
     .nav__authority {
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.4rem;
-    }
-}
-
-.nav__list-item{
-    display: inline-block;
-    margin-left: 30px;
-    .nav__list-item-link{
-        text-decoration: none;
-        color: var(--list-item-nav-color);
-    }
-}
-
-.nav__authority-element{
-    margin-left: 18px;
-    color: #0F1B4C;
-    padding: 0 10px;
-    text-align: center;
-}
-
-.nav__register{
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 8px;
-    padding: 10px 20px;
-    line-height: 2.1rem;
-}
-        .nav__list-item {
-            display: inline-block;
-            margin-left: 30px;
-            &-link {
-                text-decoration: none;
-                color: var(--list-item-nav-color);
-            }
-        }
-
-        &-element {
+        &-element{
             margin-left: 18px;
             color: #0F1B4C;
             padding: 0 10px;
             text-align: center;
-            .nav__register {
-                background-color: var(--primary-color);
-                color: white;
-                border-radius: 8px;
-                padding: 10px 20px;
-                line-height: 2.1rem;
-            }
+            
+        }
+        .nav__register{
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            line-height: 2.1rem;
         }
     }
 }
