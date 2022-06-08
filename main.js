@@ -14,3 +14,7 @@ function greeting() {
 function conflicts(er) {
     return new Error("Conflict herre")
 }
+
+function checker() {
+    return "Error occur!!"
+}
