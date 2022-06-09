@@ -185,6 +185,7 @@ html {
             text-decoration: none;
             line-height: 2.4rem;
             color: #7A7A7E;
+
         }
     }
   }
@@ -301,10 +302,63 @@ html {
         color: #C2C2C2;
         font-size: 14px;
     }
-<<<<<<< HEAD
+
   }
 }
-=======
+
+
+/*feature properties*/
+$features-img: #F5FAFE;
+$font-color: #5A6473;
+$color-sec: #0689FF;
+@mixin grid {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+@mixin format($color, $font-size, $line-height){
+    
+}
+
+.features{
+    @include grid;
+    background-color: $features-img;
+    &__title{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        color: var(--primary-color);
+    };
+    &__viewall{
+        display: flex;
+        justify-content: space-around;
+        .viewall__message{
+            flex: 1;
+            color: $font-color;
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+        .viewall__link{
+            
+
+        }
+    }
+}
+
+
+
+.footer-last{
+    display: flex;
+    width: 1110px;
+    margin: 0 auto;
+    justify-content: space-around;
+    .footer__logo{
+        font-size: 2rem;
+        color: var(--primary-color);
+    }
+    .copyright{
+        color: #C2C2C2;
+        font-size: 14px;
+    }
 }
 
 /*feature properties*/
@@ -344,4 +398,3 @@ $color-sec: #0689FF;
 }
 
 
->>>>>>> bad1f99 (add footer)
