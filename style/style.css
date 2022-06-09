@@ -115,7 +115,6 @@ html {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  justify-items: center;
   flex-wrap: wrap;
 }
 .footer .card-title {
@@ -164,6 +163,28 @@ html {
 .footer-last .copyright {
   color: #C2C2C2;
   font-size: 14px;
+}
+
+/*feature properties*/
+.features {
+  width: 1110px;
+  margin: 0 auto;
+  background-color: #F5FAFE;
+}
+.features__title {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  color: var(--primary-color);
+}
+.features__viewall {
+  display: flex;
+  justify-content: space-around;
+}
+.features__viewall .viewall__message {
+  flex: 1;
+  color: #5A6473;
+  font-size: 1.6rem;
+  line-height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
