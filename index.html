@@ -19,28 +19,32 @@
         <div class="header">
           <div class="header__nav">
             <div class="nav__logo">Bensik.</div>
-
-            <ul class="nav__list">
-              <li class="nav__list-item">
-                <a href="" class="nav__list-item-link">Home</a>
-              </li>
-              <li class="nav__list-item">
-                <a href="" class="nav__list-item-link">Fratures</a>
-              </li>
-              <li class="nav__list-item">
-                <a href="" class="nav__list-item-link">Service</a>
-              </li>
-              <li class="nav__list-item">
-                <a href="" class="nav__list-item-link">Listed</a>
-              </li>
-              <li class="nav__list-item">
-                <a href="" class="nav__list-item-link">Contact</a>
-              </li>
-            </ul>
-
-            <div class="nav__authority">
-              <div class="nav__authority-element">Sign up</div>
-              <div class="nav__authority-element nav__register">Register</div>
+            <div class="header__nav-menu" onclick="menuClick()">
+                <img src="./img/bar.svg" alt="" class="header__nav-menu-img">
+            </div>
+            <div class="nav" id="nav">
+                <ul class="nav__list">
+                  <li class="nav__list-item">
+                    <a href="" class="nav__list-item-link">Home</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="" class="nav__list-item-link">Fratures</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="" class="nav__list-item-link">Service</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="" class="nav__list-item-link">Listed</a>
+                  </li>
+                  <li class="nav__list-item">
+                    <a href="" class="nav__list-item-link">Contact</a>
+                  </li>
+                </ul>
+    
+                <div class="nav__authority">
+                  <div class="nav__authority-element">Sign up</div>
+                  <div class="nav__authority-element nav__register">Register</div>
+                </div>
             </div>
           </div>
           <div class="hero">
@@ -58,7 +62,7 @@
               <img
                 src="./img/house illustration.svg"
                 alt=""
-                class="img-of-hero"
+                class="img"
               />
             </div>
           </div>
@@ -125,10 +129,10 @@
         <div class="footer__card">
           <div class="card-title">Get in touch</div>
           <div class="card-content">
-            <p class="card-content__quote">
+            <p class="card-content__quote" style="font-size: 1.4rem">
               You'll find your next home, in any style you prefer.
             </p>
-            <div class="card-content__contact">
+            <div class="card-content__contact" style="display: flex; margin-top: 10px">
               <div class="icon-contact">
                 <img src="./img/Facebook.svg" alt="" />
               </div>
@@ -147,5 +151,16 @@
         <p class="copyright">Copyright 2020.com. All rights reserved</p>
       </div>
     </div>
+    <script>
+        var nav = document.getElementById("nav");
+        function menuClick(){
+            if(nav.style.display==="block"){
+                nav.style.display="none";
+            }
+            else{
+                nav.style.display="block";
+            }
+        }
+    </script>
   </body>
 </html>

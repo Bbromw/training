@@ -1,163 +1,149 @@
-* {
-  box-sizing: inherit;
-  margin: 0;
+$font-color: #4F5361;
+$background-color: #e6f0ff;
+$primary-color: #0F1B4C;
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
 }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+@mixin btn {
+    background-color: $primary-color;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 8px;    
 }
-$background-header: #e6f0ff;
-$primary-color: #000228;
-$list-item-nav-color: #4f5361;
-@mixin grid {
-  max-width: 1110px;
-  margin: 0 auto;
-}
-/*header*/
-.header {
-  @include grid;
-  .header__nav {
-    padding-top: 47px;
-    margin-bottom: 39px;
+@mixin flex($flex-direction,$justify-content) {
     display: flex;
+    justify-content: $justify-content;
     justify-items: center;
     align-items: center;
-    justify-content: space-around;
-    .nav__logo {
-      color: $primary-color;
-      font-size: 2rem;
+    flex-wrap: wrap;
+    flex-direction: $flex-direction;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 16px 16px;
+}
+.header__nav{
+    padding: 16px 16px;
+    @include flex(row, space-between);
+    margin-bottom: 49px;
+    .nav__logo{
+        font-size: 3.2rem;
     }
-    .nav__list {
-      list-style: none;
-      font-size: 1.4rem;
-      margin: 0 0;
-      padding: 0;
-      flex: 1;
-      .nav__list-item {
-        display: inline-block;
-        margin-left: 30px;
-        &-link {
-          text-decoration: none;
-          color: $list-item-nav-color;
-        }
-      }
-    }
-    .nav__authority {
-      margin: 0 auto;
-      padding-top: 47px;
-      margin-bottom: 39px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.4rem;
-      &-element {
-        margin-left: 18px;
-        color: #0f1b4c;
-        padding: 0 10px;
+    .nav{
+        @include flex(row, space-between);
         text-align: center;
-      }
-      .nav__register {
-        background-color: $primary-color;
-        color: white;
-        border-radius: 8px;
-        padding: 10px 20px;
-        line-height: 2.1rem;
-      }
+        @media (max-width: 375px) {
+            flex-direction: column;
+            display: none;
+        }
+        &__list{
+            list-style: none;
+            font-size: 1.6rem;
+            padding: 0;
+            &-item{
+                margin-left: 30px;
+                @media (max-width: 375px) {
+                   display: block;
+                   margin: 1.6rem;
+                }
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                    color: $font-color;
+                }
+            }
+        }
+        .nav__authority{
+            @include flex(row, space-between);
+            &-element{
+                color: $primary-color;
+                margin-left: 16px;
+                font-size: 1.4rem;
+            }          
+            .nav__register{
+                @include btn
+            }
+        }
     }
-  }
+    .header__nav-menu{
+        display: none;
+        @media (max-width: 375px) {
+            display: block;
+         }
+    }
 }
 
-.hero {
-  margin: 0 auto;
-  width: 1110px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-around;
-  .welcome {
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-    margin-bottom: 8px;
-  }
-  .title {
-    font-size: 6.4rem;
-    line-height: 7.6rem;
-    margin-bottom: 30px;
-  }
-  .message {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-    margin-bottom: 40px;
-  }
-  .hero__button {
-    width: 170px;
-    line-height: 1.95rem;
-    border-radius: 1.2rem;
-    padding: 15px 37px;
-    font-size: 1.3rem;
-    color: white;
-    background-color: $primary-color;
-  }
-  .hero-img {
-    width: 100%;
-  }
+.hero{
+    @include flex(row, space-between);
+    &-massage{
+        margin-bottom: 64px;
+        flex: 50%;
+        .welcome{
+            font-size: 1.8rem;
+        }
+        .title{
+            font-size: 6.4rem;
+            margin-bottom: 30px;
+        }
+        .message{
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+        }
+        .hero__button{
+            max-width: 170px;
+            font-size: 1.6rem;
+            @include btn;
+            text-align: center;
+        }
+    }
+    &-img{
+        flex: 50%;
+        .img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
 }
 
 /*footer*/
-.footer {
-  padding-top: 105px;
-  width: 1110px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  .card-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: var(--title-footer-card-color);
-  }
-  .card-content {
-    margin-top: 42px;
-    font-size: 1.6rem;
-    .card-content__quote {
-      line-height: 2.4rem;
-      color: #7a7a7e;
+.footer{
+    @include flex(row, space-between);
+    align-items: flex-start;
+    margin-top: 64px;
+    .footer__card{
+        @media (max-width: 375px) {
+            flex-basis: 100%;
+         }
     }
-    .card-content__contact {
-      margin-top: 50px;
-      display: flex;
-      justify-items: center;
-      align-items: center;
+    .card-title{
+        font-size: 1.8rem;
+        color: #1C1C1D;
     }
-  }
-  .card-list {
-    margin-bottom: 58px;
-    list-style: none;
-    padding: 0;
-    &__item {
-      margin-top: 18px;
+    .card-content{
+        margin-top: 16px;
+        .card-list{
+            list-style: none;
+            padding: 0;
+            &__item{
+                margin-bottom: 16px;
+                a{
+                    color: $font-color;
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                }
+            }
+        }
     }
-    &__item-link {
-      text-decoration: none;
-      line-height: 2.4rem;
-      color: #7a7a7e;
-    }
-  }
 }
 
-.footer-last {
-  display: flex;
-  width: 1110px;
-  margin: 0 auto;
-  justify-content: space-around;
-  .footer__logo {
-    font-size: 2rem;
-    color: var(--primary-color);
-  }
-  .copyright {
-    color: #c2c2c2;
-    font-size: 14px;
-  }
+.footer-last{
+    @include flex(row, space-between);
+    .footer__logo{
+        font-size: 3.2rem;
+    }
 }
+
