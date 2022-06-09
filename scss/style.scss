@@ -1,77 +1,167 @@
 :root {
-    --primary-color: #000228;
-    --list-item-nav-color: #4F5361;
-    --background-color: #E6F0FF
+  --primary-color: #000228;
+  --list-item-nav-color: #4f5361;
+  --title-footer-card-color: #1c1c1d;
+  --background-color: #e6f0ff;
 }
 
 * {
-    box-sizing: inherit;
-    margin: 0;
+  box-sizing: inherit;
+  margin: 0;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.header{
-    background-color: var(--background-color);
+.header {
+  background-color: var(--background-color);
 }
 
 .grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .header__nav {
-    margin: 0 auto;
-    padding: 47px 0;
+  margin: 0 auto;
+  padding-top: 47px;
+  margin-bottom: 39px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 1110px;
+  .nav__logo {
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+  .nav__list {
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 0 0;
+    padding: 0;
+    flex: 1;
+    .nav__list-item {
+      display: inline-block;
+      margin-left: 30px;
+      &-link {
+        text-decoration: none;
+        color: var(--list-item-nav-color);
+      }
+    }
+  }
+  .nav__authority {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    width: 1110px;
-    .nav__logo {
-        color: var(--primary-color);
-        font-size: 2rem;
+    font-size: 1.4rem;
+    &-element {
+      margin-left: 18px;
+      color: #0f1b4c;
+      padding: 0 10px;
+      text-align: center;
     }
-    .nav__list {
-        list-style: none;
-        font-size: 1.4rem;
-        margin: 0 0;
-        padding: 0;
-        flex: 1;
-        .nav__list-item{
-            display: inline-block;
-            margin-left: 30px;
-            &-link{
-                text-decoration: none;
-                color: var(--list-item-nav-color);
-            }
-        }
+  }
+  .nav__register {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    line-height: 2.1rem;
+  }
+}
 
+.hero {
+  margin: 0 auto;
+  width: 1110px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  .welcome {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-size: 6.4rem;
+    line-height: 7.6rem;
+    margin-bottom: 30px;
+  }
+  .message {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    margin-bottom: 40px;
+  }
+  .hero__button {
+    width: 170px;
+    line-height: 1.95rem;
+    border-radius: 1.2rem;
+    padding: 15px 37px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--primary-color);
+  }
+}
+
+/*footer*/
+.footer {
+  padding-top: 105px;
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  flex-wrap: wrap;
+  .card-title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--title-footer-card-color);
+  }
+  .card-content {
+    margin-top: 42px;
+    font-size: 1.6rem;
+    .card-content__quote {
+      line-height: 2.4rem;
+      color: #7a7a7e;
     }
-    .nav__authority {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.4rem;
-        &-element{
-            margin-left: 18px;
-            color: #0F1B4C;
-            padding: 0 10px;
-            text-align: center;
-            
-        }
-        .nav__register{
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 8px;
-            padding: 10px 20px;
-            line-height: 2.1rem;
-        }
+    .card-content__contact {
+      margin-top: 50px;
+      display: flex;
+      justify-items: center;
+      align-items: center;
     }
+  }
+  .card-list {
+    margin-bottom: 58px;
+    list-style: none;
+    padding: 0;
+    &__item {
+      margin-top: 18px;
+    }
+    &__item-link {
+      text-decoration: none;
+      line-height: 2.4rem;
+      color: #7a7a7e;
+    }
+  }
+}
+
+.footer-last {
+  display: flex;
+  width: 1110px;
+  margin: 0 auto;
+  justify-content: space-around;
+  .footer__logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  .copyright {
+    color: #c2c2c2;
+    font-size: 14px;
+  }
 }
