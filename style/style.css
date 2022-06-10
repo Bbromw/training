@@ -33,7 +33,10 @@ body {
 .header .header__nav .nav__logo {
   font-size: 3.2rem;
 }
-.header .header__nav .nav {
+.header .header__nav .container {
+  align-items: center;
+}
+.header .header__nav .container .nav {
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -47,30 +50,30 @@ body {
   margin: 0;
 }
 @media (max-width: 840px) {
-  .header .header__nav .nav {
+  .header .header__nav .container .nav {
     flex-direction: column;
   }
 }
-.header .header__nav .nav__list {
+.header .header__nav .container .nav__list {
   list-style: none;
   font-size: 1.6rem;
   padding: 0;
 }
-.header .header__nav .nav__list-item {
+.header .header__nav .container .nav__list-item {
   margin-left: 30px;
   display: inline-block;
 }
 @media (max-width: 840px) {
-  .header .header__nav .nav__list-item {
+  .header .header__nav .container .nav__list-item {
     display: block;
     margin: 1.6rem;
   }
 }
-.header .header__nav .nav__list-item a {
+.header .header__nav .container .nav__list-item a {
   text-decoration: none;
   color: #4f5361;
 }
-.header .header__nav .nav .nav__authority {
+.header .header__nav .container .nav__authority {
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -81,12 +84,12 @@ body {
   margin: 0 auto;
   padding: 16px 16px;
 }
-.header .header__nav .nav .nav__authority-element {
+.header .header__nav .container .nav__authority-element {
   color: #0f1b4c;
   margin-left: 16px;
   font-size: 1.4rem;
 }
-.header .header__nav .nav .nav__authority .nav__register {
+.header .header__nav .container .nav__authority .nav__register {
   background-color: #0f1b4c;
   color: white;
   padding: 10px;
@@ -106,17 +109,22 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: block !important;
+    display: blockS !important;
     top: -200%;
     left: 0;
     transition: 1s;
-    background-color: white;
-  }
-  .nav__list {
-    margin-top: 20%;
+    background-color: #e6f0ff;
   }
   .nav__authority {
     justify-content: center !important;
+  }
+  .nav .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
   }
   .header__nav-menu {
     z-index: 10;
@@ -171,6 +179,11 @@ body {
   height: auto;
 }
 
+@media screen and (max-width: 840px) {
+  .hero {
+    flex-direction: column;
+  }
+}
 /*footer*/
 .footer {
   display: flex;

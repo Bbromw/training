@@ -42,30 +42,33 @@ body{
     .nav__logo {
       font-size: 3.2rem;
     }
-    .nav {
-      @include flex(row, space-between);
-      text-align: center;
-      margin: 0;
-      @media (max-width: 840px) {
-        flex-direction: column;
-      }
-      &__list {
-        list-style: none;
-        font-size: 1.6rem;
-        padding: 0;
-        &-item {
-          margin-left: 30px;
-          @media (max-width: 840px) {
-            display: block;
-            margin: 1.6rem;
-          }
-          display: inline-block;
-          a {
-            text-decoration: none;
-            color: $font-color;
+    .container{
+      align-items: center;
+      .nav {
+        @include flex(row, space-between);
+        text-align: center;
+        margin: 0;
+        @media (max-width: 840px) {
+          flex-direction: column;
+        }
+        &__list {
+          list-style: none;
+          font-size: 1.6rem;
+          padding: 0;
+          &-item {
+            margin-left: 30px;
+            @media (max-width: 840px) {
+              display: block;
+              margin: 1.6rem;
+            }
+            display: inline-block;
+            a {
+              text-decoration: none;
+              color: $font-color;
+            }
           }
         }
-      }
+    }
       .nav__authority {
         @include flex(row, space-between);
         &-element {
@@ -92,16 +95,21 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    display: block !important;
+    display: blockS !important;
     top: -200%;
     left: 0;
     transition: 1s;
-    background-color: #ffff;
-    &__list{
-      margin-top: 20%;
-    }
+    background-color: $background-color;
     &__authority{
       justify-content: center !important;
+    }
+    .container{
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
     }
   }
   .header__nav-menu{
@@ -146,6 +154,11 @@ body{
       max-width: 100%;
       height: auto;
     }
+  }
+}
+@media screen and (max-width: 840px) {
+  .hero{
+    flex-direction: column;
   }
 }
 
