@@ -1,163 +1,204 @@
+$font-color: #4f5361;
+$background-color: #e6f0ff;
+$primary-color: #0f1b4c;
 * {
-  box-sizing: inherit;
   margin: 0;
+  box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
-$background-header: #e6f0ff;
-$primary-color: #000228;
-$list-item-nav-color: #4f5361;
-@mixin grid {
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin btn {
+  background-color: $primary-color;
+  color: #ffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+@mixin flex($flex-direction, $justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: $flex-direction;
   max-width: 1110px;
   margin: 0 auto;
+  padding: 16px 16px;
 }
-/*header*/
-.header {
-  @include grid;
+.header{
+  position: relative;
   .header__nav {
-    padding-top: 47px;
-    margin-bottom: 39px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-around;
-    .nav__logo {
-      color: $primary-color;
-      font-size: 2rem;
+    .active{
+      top: 0;
     }
-    .nav__list {
-      list-style: none;
-      font-size: 1.4rem;
-      margin: 0 0;
-      padding: 0;
-      flex: 1;
-      .nav__list-item {
-        display: inline-block;
-        margin-left: 30px;
-        &-link {
-          text-decoration: none;
-          color: $list-item-nav-color;
+    padding: 16px 16px;
+    @include flex(row, space-between);
+    margin-bottom: 49px;
+    .nav__logo {
+      font-size: 3.2rem;
+    }
+    .container{
+      align-items: center;
+      .nav {
+        @include flex(row, space-between);
+        text-align: center;
+        margin: 0;
+        @media (max-width: 840px) {
+          flex-direction: column;
+        }
+        &__list {
+          list-style: none;
+          font-size: 1.6rem;
+          padding: 0;
+          &-item {
+            margin-left: 30px;
+            @media (max-width: 840px) {
+              display: block;
+              margin: 1.6rem;
+            }
+            display: inline-block;
+            a {
+              text-decoration: none;
+              color: $font-color;
+            }
+          }
+        }
+    }
+      .nav__authority {
+        @include flex(row, space-between);
+        &-element {
+          color: $primary-color;
+          margin-left: 16px;
+          font-size: 1.4rem;
+        }
+        .nav__register {
+          @include btn;
         }
       }
     }
-    .nav__authority {
-      margin: 0 auto;
-      padding-top: 47px;
-      margin-bottom: 39px;
-      display: flex;
-      justify-content: center;
+    .header__nav-menu {
+      display: none;
+      @media (max-width: 840px) {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .nav{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: blockS !important;
+    top: -200%;
+    left: 0;
+    transition: 1s;
+    background-color: $background-color;
+    &__authority{
+      justify-content: center !important;
+    }
+    .container{
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
       align-items: center;
-      font-size: 1.4rem;
-      &-element {
-        margin-left: 18px;
-        color: #0f1b4c;
-        padding: 0 10px;
-        text-align: center;
-      }
-      .nav__register {
-        background-color: $primary-color;
-        color: white;
-        border-radius: 8px;
-        padding: 10px 20px;
-        line-height: 2.1rem;
-      }
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+  .header__nav-menu{
+    z-index: 10;
+  }
+  .hero{
+    .title{
+      font-size: 3.2rem !important;
+    }
+    .message{
+      font-size: 1.2rem !important
     }
   }
 }
 
 .hero {
-  margin: 0 auto;
-  width: 1110px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-around;
-  .welcome {
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-    margin-bottom: 8px;
+  @include flex(row, space-between);
+  &-massage {
+    margin-bottom: 64px;
+    flex: 50%;
+    .welcome {
+      font-size: 1.8rem;
+    }
+    .title {
+      font-size: 6.4rem;
+      margin-bottom: 30px;
+    }
+    .message {
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+    }
+    .hero__button {
+      max-width: 170px;
+      font-size: 1.6rem;
+      @include btn;
+      text-align: center;
+    }
   }
-  .title {
-    font-size: 6.4rem;
-    line-height: 7.6rem;
-    margin-bottom: 30px;
+  &-img {
+    flex: 50%;
+    .img {
+      max-width: 100%;
+      height: auto;
+    }
   }
-  .message {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-    margin-bottom: 40px;
-  }
-  .hero__button {
-    width: 170px;
-    line-height: 1.95rem;
-    border-radius: 1.2rem;
-    padding: 15px 37px;
-    font-size: 1.3rem;
-    color: white;
-    background-color: $primary-color;
-  }
-  .hero-img {
-    width: 100%;
+}
+@media screen and (max-width: 840px) {
+  .hero{
+    flex-direction: column;
   }
 }
 
 /*footer*/
 .footer {
-  padding-top: 105px;
-  width: 1110px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  @include flex(row, space-between);
+  align-items: flex-start;
+  margin-top: 64px;
   .card-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: var(--title-footer-card-color);
+    font-size: 1.8rem;
+    color: #1c1c1d;
   }
   .card-content {
-    margin-top: 42px;
-    font-size: 1.6rem;
-    .card-content__quote {
-      line-height: 2.4rem;
-      color: #7a7a7e;
-    }
-    .card-content__contact {
-      margin-top: 50px;
-      display: flex;
-      justify-items: center;
-      align-items: center;
-    }
-  }
-  .card-list {
-    margin-bottom: 58px;
-    list-style: none;
-    padding: 0;
-    &__item {
-      margin-top: 18px;
-    }
-    &__item-link {
-      text-decoration: none;
-      line-height: 2.4rem;
-      color: #7a7a7e;
+    margin-top: 16px;
+    .card-list {
+      list-style: none;
+      padding: 0;
+      &__item {
+        margin-bottom: 16px;
+        a {
+          color: $font-color;
+          font-size: 1.4rem;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
 
 .footer-last {
-  display: flex;
-  width: 1110px;
-  margin: 0 auto;
-  justify-content: space-around;
+  @include flex(row, space-between);
   .footer__logo {
-    font-size: 2rem;
-    color: var(--primary-color);
+    font-size: 3.2rem;
   }
-  .copyright {
-    color: #c2c2c2;
-    font-size: 14px;
+}
+
+@media screen and (max-width: 840px) {
+  .footer{
+    &__card{
+      flex-basis: 49%;
+    }
   }
 }
