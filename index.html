@@ -19,10 +19,10 @@
         <div class="header">
           <div class="header__nav">
             <div class="nav__logo">Bensik.</div>
-            <div class="header__nav-menu" onclick="menuClick()">
+            <div class="header__nav-menu" id="btn">
                 <img src="./img/bar.svg" alt="" class="header__nav-menu-img">
             </div>
-            <div class="nav" id="nav">
+            <div class="nav hide-nav">
                 <ul class="nav__list">
                   <li class="nav__list-item">
                     <a href="" class="nav__list-item-link">Home</a>
@@ -151,16 +151,6 @@
         <p class="copyright">Copyright 2020.com. All rights reserved</p>
       </div>
     </div>
-    <script>
-        var nav = document.getElementById("nav");
-        function menuClick(){
-            if(nav.style.display==="block"){
-                nav.style.display="none";
-            }
-            else{
-                nav.style.display="block";
-            }
-        }
-    </script>
+    <script src="./javascript/main.js"></script>
   </body>
 </html>
