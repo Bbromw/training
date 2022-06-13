@@ -43,54 +43,6 @@ body {
     font-size: 1.2rem !important;
   }
 }
-.hero {
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 16px 16px;
-}
-.hero-massage {
-  margin-bottom: 64px;
-  flex: 50%;
-}
-.hero-massage .welcome {
-  font-size: 1.8rem;
-}
-.hero-massage .title {
-  font-size: 6.4rem;
-  margin-bottom: 30px;
-}
-.hero-massage .message {
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-}
-.hero-massage .hero__button {
-  max-width: 170px;
-  font-size: 1.6rem;
-  background-color: #0f1b4c;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
-.hero-img {
-  flex: 50%;
-}
-.hero-img .img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media screen and (max-width: 840px) {
-  .hero {
-    flex-direction: column;
-  }
-}
 /*footer*/
 @media screen and (max-width: 840px) {
   .footer__card {
@@ -359,20 +311,20 @@ body {
     margin-bottom: 1em;
   }
 }
-.rating-heading .heading-item .starrated {
+.rating-heading .heading-item .star-rated {
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
 }
 @media screen and (max-width: 840px) {
-  .rating-heading .heading-item .starrated {
+  .rating-heading .heading-item .star-rated {
     justify-content: flex-start;
     padding-bottom: 1em;
   }
 }
 @media screen and (max-width: 375px) {
-  .rating-heading .heading-item .starrated {
+  .rating-heading .heading-item .star-rated {
     justify-content: flex-start;
     padding-bottom: 1em;
   }
@@ -384,23 +336,20 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.rating-companies img {
-  max-width: 100%;
-  width: 12%;
-  height: auto;
-  margin-top: 12em;
+.rating-companies .rating-companies-element {
+  margin-top: 10em;
+  width: 15%;
 }
 @media screen and (max-width: 840px) {
-  .rating-companies img {
-    width: 15%;
-    margin-top: 10em;
+  .rating-companies .rating-companies-element {
+    width: 35%;
+    margin-top: 5em;
   }
 }
-@media screen and (max-width: 375px) {
-  .rating-companies img {
-    margin-top: 7em;
-    width: 40%;
-  }
+.rating-companies .rating-companies-element img {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

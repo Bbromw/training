@@ -69,42 +69,7 @@ body{
   }
 }
 
-.hero {
-  @include flex(row, space-between);
-  &-massage {
-    margin-bottom: 64px;
-    flex: 50%;
-    .welcome {
-      font-size: 1.8rem;
-    }
-    .title {
-      font-size: 6.4rem;
-      margin-bottom: 30px;
-    }
-    .message {
-      font-size: 1.6rem;
-      margin-bottom: 40px;
-    }
-    .hero__button {
-      max-width: 170px;
-      font-size: 1.6rem;
-      @include btn;
-      text-align: center;
-    }
-  }
-  &-img {
-    flex: 50%;
-    .img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-}
-@media screen and (max-width: 840px) {
-  .hero{
-    flex-direction: column;
-  }
-}
+
 
 /*footer*/
 
