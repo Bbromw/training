@@ -1,0 +1,100 @@
+.header{
+    position: relative;
+    .header__nav {
+      .active{
+        top: 0;
+      }
+      padding: 16px 16px;
+      @include flex(row, space-between);
+      margin-bottom: 49px;
+      .nav__logo {
+        z-index: 15;
+        font-size: 3.2rem;
+      }
+      .container{
+        align-items: center;
+        .nav {
+          @include flex(row, space-between);
+          text-align: center;
+          margin: 0;
+          @media (max-width: 840px) {
+            flex-direction: column;
+          }
+          &__list {
+            list-style: none;
+            font-size: 1.6rem;
+            padding: 0;
+            &-item {
+              margin-left: 30px;
+              @media (max-width: 840px) {
+                display: block;
+                margin: 1.6rem;
+              }
+              display: inline-block;
+              a {
+                text-decoration: none;
+                color: $font-color;
+              }
+            }
+          }
+      }
+        .nav__authority {
+          @include flex(row, space-between);
+          &-element {
+            color: $primary-color;
+            margin-left: 16px;
+            font-size: 1.4rem;
+          }
+          .nav__register {
+            @include btn;
+          }
+        }
+      }
+      .header__nav-menu {
+        display: none;
+        @media (max-width: 840px) {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  .hero {
+    @include flex(row, space-between);
+    &-massage {
+      margin-bottom: 64px;
+      flex: 50%;
+      .welcome {
+        font-size: 1.8rem;
+      }
+      .title {
+        @include tablet{
+          font-size: 3.2rem;
+        }
+        font-size: 6.4rem;
+        margin-bottom: 30px;
+      }
+      .message {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+      }
+      .hero__button {
+        max-width: 170px;
+        font-size: 1.6rem;
+        @include btn;
+        text-align: center;
+      }
+    }
+    &-img {
+      flex: 50%;
+      .img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @include tablet{
+    .hero{
+      flex-direction: column;
+    }
+  }

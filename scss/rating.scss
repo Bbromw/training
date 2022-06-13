@@ -1,0 +1,75 @@
+.rating{
+    @include mobile{
+        padding-top: 0.1em;
+    }
+    padding-top: 12em;
+    padding-left: 16px;
+    padding-right: 16px;
+    p{
+        font-size: 1.6rem;
+        color: #7D8589;
+    }
+    max-width: 1110px;
+    margin: 0 auto;
+    &-heading{
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+        }
+        @include mobile{
+            flex-direction: column;
+        };
+        h3{
+            font-size: 2.5rem;
+            color: #101010;
+        }
+        .heading-item{
+            @include tablet{
+                margin-bottom: 1em;
+            }
+            @include mobile{
+                flex-direction: column;
+                margin-bottom: 1em;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .starrated{
+                @include tablet{
+                    justify-content: flex-start;
+                    padding-bottom: 1em;
+                };
+                @include mobile{
+                    justify-content: flex-start;
+                    padding-bottom: 1em;
+                }
+                display: flex;
+                align-items: center;
+                flex: 1;
+                justify-content: flex-end;
+            }
+        }
+    }
+    &-companies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            @include tablet{
+                width: 15%;
+                margin-top: 10em;
+            }
+            @include mobile{
+                margin-top: 7em;
+                width: 40%;
+            }
+            max-width: 100%;
+            width: 12%;
+            height: auto;
+            margin-top: 12em;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+@import "./responsive.scss";
 $font-color: #4f5361;
 $background-color: #e6f0ff;
 $primary-color: #0f1b4c;
@@ -19,6 +20,7 @@ body{
   padding: 10px;
   border-radius: 8px;
 }
+
 @mixin flex($flex-direction, $justify-content) {
   display: flex;
   justify-content: $justify-content;
@@ -30,66 +32,7 @@ body{
   margin: 0 auto;
   padding: 16px 16px;
 }
-.header{
-  position: relative;
-  .header__nav {
-    .active{
-      top: 0;
-    }
-    padding: 16px 16px;
-    @include flex(row, space-between);
-    margin-bottom: 49px;
-    .nav__logo {
-      z-index: 15;
-      font-size: 3.2rem;
-    }
-    .container{
-      align-items: center;
-      .nav {
-        @include flex(row, space-between);
-        text-align: center;
-        margin: 0;
-        @media (max-width: 840px) {
-          flex-direction: column;
-        }
-        &__list {
-          list-style: none;
-          font-size: 1.6rem;
-          padding: 0;
-          &-item {
-            margin-left: 30px;
-            @media (max-width: 840px) {
-              display: block;
-              margin: 1.6rem;
-            }
-            display: inline-block;
-            a {
-              text-decoration: none;
-              color: $font-color;
-            }
-          }
-        }
-    }
-      .nav__authority {
-        @include flex(row, space-between);
-        &-element {
-          color: $primary-color;
-          margin-left: 16px;
-          font-size: 1.4rem;
-        }
-        .nav__register {
-          @include btn;
-        }
-      }
-    }
-    .header__nav-menu {
-      display: none;
-      @media (max-width: 840px) {
-        display: block;
-      }
-    }
-  }
-}
+
 
 @media screen and (max-width: 840px) {
   .nav{
@@ -164,37 +107,7 @@ body{
 }
 
 /*footer*/
-.footer {
-  @include flex(row, space-between);
-  align-items: flex-start;
-  margin-top: 64px;
-  .card-title {
-    font-size: 1.8rem;
-    color: #1c1c1d;
-  }
-  .card-content {
-    margin-top: 16px;
-    .card-list {
-      list-style: none;
-      padding: 0;
-      &__item {
-        margin-bottom: 16px;
-        a {
-          color: $font-color;
-          font-size: 1.4rem;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
 
-.footer-last {
-  @include flex(row, space-between);
-  .footer__logo {
-    font-size: 3.2rem;
-  }
-}
 
 @media screen and (max-width: 840px) {
   .footer{
@@ -203,3 +116,8 @@ body{
     }
   }
 }
+
+@import "./footer.scss";
+@import "./header.scss";
+@import "./rating.scss";
+
