@@ -31,6 +31,7 @@ body {
   top: 0;
 }
 .header .header__nav .nav__logo {
+  z-index: 15;
   font-size: 3.2rem;
 }
 .header .header__nav .container {
