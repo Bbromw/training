@@ -40,6 +40,7 @@ body{
     @include flex(row, space-between);
     margin-bottom: 49px;
     .nav__logo {
+      z-index: 15;
       font-size: 3.2rem;
     }
     .container{
