@@ -351,5 +351,15 @@ body {
   max-width: 80%;
   height: auto;
 }
+@media screen and (max-width: 375px) {
+  .rating-companies .rating-companies-element img {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 840px) {
+  .rating-companies .rating-companies-element img {
+    width: 65%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

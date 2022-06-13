@@ -65,6 +65,12 @@
             margin-top: 10em;
             width: 15%;
             img{
+                @include mobile{
+                    width: 100% !important;
+                }
+                @include tablet{
+                    width: 65%;
+                }
                 width: 100%;
                 max-width: 80%;
                 height: auto;
