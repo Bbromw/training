@@ -597,4 +597,105 @@ body {
   }
 }
 
+.ads {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 236px;
+}
+.ads__content {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ads__content .ads-details {
+  position: relative;
+  width: 48%;
+}
+@media screen and (max-width: 994px) {
+  .ads__content .ads-details {
+    width: 100%;
+  }
+}
+.ads__content .ads-details .details-content h4 {
+  display: flex;
+  justify-content: space-between;
+  color: #000339;
+  font-size: 26px;
+}
+.ads__content .ads-details .details-content p {
+  font-size: 12px;
+  color: #7B8087;
+}
+.ads__content .ads-details .details-content .ads-img {
+  width: 90%;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  height: auto;
+  z-index: -1;
+}
+.ads__content .ads-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48%;
+}
+@media screen and (max-width: 994px) {
+  .ads__content .ads-message {
+    width: 100%;
+    margin-top: 500px;
+  }
+}
+@media screen and (max-width: 606px) {
+  .ads__content .ads-message {
+    margin-top: 300px !important;
+  }
+}
+.ads__content .ads-message h3 {
+  position: relative;
+  font-size: 3.5rem;
+  color: #000339;
+}
+.ads__content .ads-message h3::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background-color: #000339;
+  margin-bottom: 20px;
+}
+.ads__content .ads-message p {
+  font-size: 16px;
+  color: #5A6473;
+}
+.ads__countdown {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ads__countdown .countdown-element {
+  text-align: center;
+  width: 30%;
+}
+@media screen and (max-width: 994px) {
+  .ads__countdown .countdown-element {
+    width: 100%;
+    margin: 43px 0;
+  }
+}
+.ads__countdown .countdown-element h4 {
+  font-size: 6.4rem;
+  margin-bottom: 5px;
+}
+.ads__countdown .countdown-element p {
+  font-size: 16px;
+  color: #7B8087;
+}
+
 /*# sourceMappingURL=style.css.map */

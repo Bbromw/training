@@ -1,0 +1,95 @@
+.ads{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 236px;
+    &__content{
+        min-height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .ads-details{
+            @include tablet{
+                width: 100%;
+            }
+            position: relative;
+            width: 48%;
+            .details-content{
+                h4{
+                    display: flex;
+                    justify-content: space-between;
+                    color:#000339;
+                    font-size: 26px;
+                }
+                p{
+                    font-size: 12px;
+                    color:#7B8087;
+                }
+                .ads-img{
+                    width: 90%;;
+                    position: absolute;
+                    right: 0;
+                    top: 0%;
+                    height: auto;
+                    z-index: -1;
+                }
+            }
+        }
+        .ads-message{
+            @include tablet{
+                width: 100%;
+                margin-top: 500px;
+            }
+            @include mobile{
+                margin-top: 300px !important;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 48%;
+            h3{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top:-5px;
+                    left: 0;
+                    width: 40px;
+                    height: 4px;
+                    background-color: #000339;
+                    margin-bottom: 20px;
+                }
+                font-size: 3.5rem;
+                color: #000339;
+            }
+            p{
+                font-size: 16px;
+                color:
+                #5A6473
+            }
+        }
+    }
+    &__countdown{
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .countdown-element{
+            text-align: center;
+            width: 30%;
+            @include tablet{
+                width: 100%;
+                margin: 43px 0;
+            }
+            h4{
+                font-size: 6.4rem;
+                margin-bottom: 5px;
+            }
+            p{
+                font-size: 16px;
+                color: #7B8087;
+            }
+        }
+    }
+}
