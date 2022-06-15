@@ -1,0 +1,56 @@
+.feature2 {
+    border-radius: 20px;
+  padding: 16px 16px;
+  flex-wrap: wrap;
+  display: flex;
+  max-width: 1110px;
+  margin: 0 auto;
+  background-color: #063183;
+  &__content {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+        @include tablet{
+            font-size: 2.4rem;
+        }
+        margin: 10px 0;
+        @include mobile{
+            font-size: 2.4rem;
+        }
+      color: #ffff;
+      font-size: 3.5rem;
+    }
+    p {
+        margin: 10px 0;
+      color: #ffff;
+      font-size: 1.6rem;
+    }
+    button {
+        margin: 20px 0;
+      border-style: none;
+      width: 151px;
+      color: #002366;
+      font-size: 13px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      background-color: #ffff;
+    }
+  }
+  &__img{
+    @include mobile{
+        width: 100%;
+        margin-top: 50px;
+    }
+    width: 48%;
+    img{ 
+        @include mobile{
+            transform: scale(1);
+        }
+        transform: scale(1.2);
+        max-width: 100%;
+        height: auto;
+    }
+  }
+}
