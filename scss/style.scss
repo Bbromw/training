@@ -88,5 +88,9 @@ body{
 @import "./how-it-work.scss";
 @import "./feature1.scss";
 @import "./feature2.scss";
-@import "./ads.scss"
+@import "./ads.scss";
+@import "./animation.scss";
 
+.active-animation{
+  animation: moveDown 1s ease-in-out;
+}

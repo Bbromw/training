@@ -221,6 +221,7 @@ body {
   padding: 16px 16px;
 }
 .hero-massage {
+  animation: moveToRight 1s ease-in-out;
   margin-bottom: 64px;
   flex: 50%;
 }
@@ -250,6 +251,7 @@ body {
   text-align: center;
 }
 .hero-img {
+  animation: moveToLeft 1s ease-in-out;
   flex: 50%;
 }
 .hero-img .img {
@@ -696,6 +698,50 @@ body {
 .ads__countdown .countdown-element p {
   font-size: 16px;
   color: #7B8087;
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-20%);
+    opacity: 1;
+  }
+}
+.active-animation {
+  animation: moveDown 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
