@@ -50,7 +50,8 @@ body {
   }
 }
 .footer {
-  margin-top: 150px !important;
+  padding: 7em 16px !important;
+  margin-top: 0px !important;
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -111,7 +112,7 @@ body {
     align-items: flex-start;
   }
   .footer-last p {
-    margin-top: 16px;
+    margin-top: 0px;
   }
 }
 
@@ -221,6 +222,8 @@ body {
   padding: 16px 16px;
 }
 .hero-massage {
+  opacity: 0;
+  animation: moveToRight 2s forwards ease-in-out;
   margin-bottom: 64px;
   flex: 50%;
 }
@@ -250,6 +253,8 @@ body {
   text-align: center;
 }
 .hero-img {
+  opacity: 0;
+  animation: moveToLeft 2s forwards ease-in-out;
   flex: 50%;
 }
 .hero-img .img {
@@ -696,6 +701,46 @@ body {
 .ads__countdown .countdown-element p {
   font-size: 16px;
   color: #7B8087;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.scroll {
+  opacity: 0;
+  padding: 10em 16px !important;
+  margin: 0 auto !important;
+}
+
+.active-animation {
+  animation-name: moveDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

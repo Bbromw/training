@@ -1,5 +1,6 @@
 .footer{
-  margin-top: 150px !important;
+  padding: 7em 16px !important;
+  margin-top: 0px !important;
   &__card{
     @include mobile{
       margin-top: 77px;
@@ -42,7 +43,7 @@
       flex-direction: column;
       align-items: flex-start;
       p{
-        margin-top: 16px;
+        margin-top: 0px;
       }
     }
   }
