@@ -62,7 +62,7 @@
   .hero {
     @include flex(row, space-between);
     &-massage {
-      animation: moveToRight 1s ease-in-out;
+      animation: moveToRight 1s forwards ease-in-out;
       margin-bottom: 64px;
       flex: 50%;
       .welcome {
@@ -87,7 +87,7 @@
       }
     }
     &-img {
-      animation: moveToLeft 1s ease-in-out;
+      animation: moveToLeft 1s forwards ease-in-out;
       flex: 50%;
       .img {
         max-width: 100%;

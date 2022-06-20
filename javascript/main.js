@@ -13,6 +13,6 @@ window.addEventListener("scroll", () => {
   const scrolled = window.pageYOffset;
   for (let i = 0; i < element.length; i++) {
     const elementTop = element[i].offsetTop
-    if (elementTop <= scrolled) element[i].classList.add("active-animation");
+    if ((elementTop/2) <= scrolled) element[i].classList.add("active-animation");
   }
 });

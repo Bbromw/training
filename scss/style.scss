@@ -98,7 +98,9 @@ body{
 }
 
 .active-animation{
-  animation: moveDown 1s ease-in-out;
-  opacity: 1;
+  animation-name: moveDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 

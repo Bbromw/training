@@ -222,7 +222,7 @@ body {
   padding: 16px 16px;
 }
 .hero-massage {
-  animation: moveToRight 1s ease-in-out;
+  animation: moveToRight 1s forwards ease-in-out;
   margin-bottom: 64px;
   flex: 50%;
 }
@@ -252,7 +252,7 @@ body {
   text-align: center;
 }
 .hero-img {
-  animation: moveToLeft 1s ease-in-out;
+  animation: moveToLeft 1s forwards ease-in-out;
   flex: 50%;
 }
 .hero-img .img {
@@ -723,6 +723,7 @@ body {
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .scroll {
@@ -732,8 +733,10 @@ body {
 }
 
 .active-animation {
-  animation: moveDown 1s ease-in-out;
-  opacity: 1;
+  animation-name: moveDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
