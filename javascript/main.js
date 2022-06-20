@@ -1,28 +1,18 @@
 const button = document.getElementById("btn");
 const nav = document.querySelector(".hide-nav").classList;
-button.addEventListener("click", function(){
-  if(nav.contains("active")){
-    nav.remove("active")
-  }
-  else{
-    nav.add("active")
+button.addEventListener("click", function () {
+  if (nav.contains("active")) {
+    nav.remove("active");
+  } else {
+    nav.add("active");
   }
 });
 
-const element = document.querySelectorAll(".scroll")
-const windowHeight = window.innerHeight
+const element = document.querySelectorAll(".scroll");
 window.addEventListener("scroll", () => {
-  for(let i = 0; i < element.length; i++){
-    const elementTop = element[i].getBoundingClientRect().top
-    console.log(elementTop)
-    if(elementTop < windowHeight - 650){
-      element[i].classList.add("active-animation")   
-    }
-    else
-      element[i].classList.remove("active-animation")  
+  const scrolled = window.pageYOffset;
+  for (let i = 0; i < element.length; i++) {
+    const elementTop = element[i].offsetTop
+    if (elementTop <= scrolled) element[i].classList.add("active-animation");
   }
-})
-
-
-
-
+});

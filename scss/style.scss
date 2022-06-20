@@ -90,7 +90,15 @@ body{
 @import "./feature2.scss";
 @import "./ads.scss";
 @import "./animation.scss";
+.scroll{
+  opacity: 0;
+  padding: 10em 16px !important;
+  margin: 0 auto !important;
+
+}
 
 .active-animation{
   animation: moveDown 1s ease-in-out;
+  opacity: 1;
 }
+
