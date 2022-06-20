@@ -12,7 +12,9 @@ const element = document.querySelectorAll(".scroll");
 window.addEventListener("scroll", () => {
   const scrolled = window.pageYOffset;
   for (let i = 0; i < element.length; i++) {
-    const elementTop = element[i].offsetTop
-    if ((elementTop/2) <= scrolled) element[i].classList.add("active-animation");
+    const { offsetTop, classList } = element[i];
+    if (offsetTop / 2 <= scrolled)
+      if (!classList.contains("active-animation"))
+        classList.add("active-animation");
   }
 });

@@ -222,7 +222,8 @@ body {
   padding: 16px 16px;
 }
 .hero-massage {
-  animation: moveToRight 1s forwards ease-in-out;
+  opacity: 0;
+  animation: moveToRight 2s forwards ease-in-out;
   margin-bottom: 64px;
   flex: 50%;
 }
@@ -252,7 +253,8 @@ body {
   text-align: center;
 }
 .hero-img {
-  animation: moveToLeft 1s forwards ease-in-out;
+  opacity: 0;
+  animation: moveToLeft 2s forwards ease-in-out;
   flex: 50%;
 }
 .hero-img .img {
@@ -707,6 +709,7 @@ body {
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes moveToLeft {
@@ -715,6 +718,7 @@ body {
   }
   100% {
     transform: translateX(0%);
+    opacity: 1;
   }
 }
 @keyframes moveDown {
